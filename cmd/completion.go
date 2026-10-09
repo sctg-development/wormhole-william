@@ -107,12 +107,13 @@ func recvCodeCompletion(cmd *cobra.Command, args []string, toComplete string) ([
 	even := len(parts)%2 == 0
 
 	var candidates []string
-	for _, pair := range wordlist.RawWords {
+	rawWords := wordlist.GetWordPairs()
+	for _, pair := range rawWords {
 		var candidateWord string
 		if even {
-			candidateWord = pair.Even
+			candidateWord = pair[0]
 		} else {
-			candidateWord = pair.Odd
+			candidateWord = pair[1]
 		}
 		if strings.HasPrefix(candidateWord, currentCompletion) {
 			guessParts := append(prefix, candidateWord)

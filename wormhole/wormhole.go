@@ -43,6 +43,12 @@ type Client struct {
 	// default to 2.
 	PassPhraseComponentLength int
 
+	// WordlistGenerator is an optional function to generate the passphrase words.
+	// If nil, the default 256-word wordlist is used.
+	// Can be set to a custom wordlist's ChooseWords method, e.g.:
+	//   c.WordlistGenerator = wordlist.LoadEFF("eff_large_wordlist.txt").ChooseWords
+	WordlistGenerator func(int) string
+
 	// VerifierOk specifies an optional hook to be called before
 	// transmitting/receiving the encrypted payload.
 	//

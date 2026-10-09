@@ -51,7 +51,11 @@ func (c *Client) SendText(ctx context.Context, msg string, opts ...SendOption) (
 			return "", nil, err
 		}
 
-		pwStr = nameplate + "-" + wordlist.ChooseWords(c.wordCount())
+		words := c.WordlistGenerator(c.wordCount())
+		if words == "" {
+			words = wordlist.ChooseWords(c.wordCount())
+		}
+		pwStr = nameplate + "-" + words
 	} else {
 		pwStr = options.code
 		nameplate, err := nameplateFromCode(pwStr)
@@ -213,7 +217,11 @@ func (c *Client) sendFileDirectory(ctx context.Context, offer *offerMsg, r io.Re
 			return "", nil, err
 		}
 
-		pwStr = nameplate + "-" + wordlist.ChooseWords(c.wordCount())
+		words := c.WordlistGenerator(c.wordCount())
+		if words == "" {
+			words = wordlist.ChooseWords(c.wordCount())
+		}
+		pwStr = nameplate + "-" + words
 	} else {
 		pwStr = options.code
 		nameplate, err := nameplateFromCode(pwStr)
