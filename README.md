@@ -11,7 +11,7 @@ Currently, wormhole-william supports:
 
 ## Docs
 
-https://pkg.go.dev/github.com/psanford/wormhole-william/wormhole?tab=doc
+https://pkg.go.dev/github.com/sctg-development/wormhole-william/wormhole?tab=doc
 
 ## CLI Usage
 
@@ -64,7 +64,7 @@ wormhole-william uses go modules so it requires a version of the go tool chain >
 To just install via the go tool run:
 
 ```
-go install github.com/psanford/wormhole-william@latest
+go install github.com/sctg-development/wormhole-william@latest
 ```
 
 ## API Usage
@@ -80,7 +80,7 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/psanford/wormhole-william/wormhole"
+	"github.com/sctg-development/wormhole-william/wormhole"
 )
 
 func sendText() {
@@ -129,7 +129,7 @@ func recvText(code string) {
 }
 ```
 
-See the [cli tool](https://github.com/psanford/wormhole-william/tree/master/cmd) and [examples](https://github.com/psanford/wormhole-william/tree/master/examples) directory for working examples of how to use the API to send and receive text, files and directories.
+See the [cli tool](https://github.com/sctg-development/wormhole-william/tree/master/cmd) and [examples](https://github.com/sctg-development/wormhole-william/tree/master/examples) directory for working examples of how to use the API to send and receive text, files and directories.
 
 ## Third Party Users of Wormhole William
 
@@ -137,4 +137,4 @@ See the [cli tool](https://github.com/psanford/wormhole-william/tree/master/cmd)
 - [riftshare](https://github.com/achhabra2/riftshare): Desktop filesharing app
 - [termshark](https://github.com/gcla/termshark): A terminal UI for tshark
 - [tmux-wormhole](https://github.com/gcla/tmux-wormhole): tmux wormhole integration
-- [wormhole-william-mobile](https://github.com/psanford/wormhole-william-mobile): Android wormhole-william app
+- [wormhole-william-mobile](https://github.com/sctg-development/wormhole-william-mobile): Android wormhole-william app
