@@ -15,7 +15,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/psanford/wormhole-william/internal/crypto"
+	"github.com/sctg-development/wormhole-william/internal/crypto"
 	"golang.org/x/crypto/hkdf"
 	"golang.org/x/crypto/nacl/secretbox"
 )

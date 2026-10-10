@@ -11,8 +11,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/psanford/wormhole-william/internal/crypto"
-	"github.com/psanford/wormhole-william/rendezvous"
+	"github.com/sctg-development/wormhole-william/internal/crypto"
+	"github.com/sctg-development/wormhole-william/rendezvous"
 )
 
 // Receive receives a message sent by a wormhole client.

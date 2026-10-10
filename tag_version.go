@@ -17,7 +17,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/psanford/wormhole-william/version"
+	"github.com/sctg-development/wormhole-william/version"
 )
 
 var updateMajor = flag.Bool("major", false, "update major component")
