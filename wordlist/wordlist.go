@@ -363,8 +363,8 @@ func init() {
 		0xFE: {"woodlark", "yesteryear"},
 		0xFF: {"zulu", "yucatan"},
 	}
-	for i := byte(0); i <= 0xFF; i++ {
-		words = append(words, rawWords[i][0], rawWords[i][1])
+	for i := 0; i <= 0xFF; i++ {
+		words = append(words, rawWords[byte(i)][0], rawWords[byte(i)][1])
 	}
 	Default = &Wordlist{Words: words}
 }
